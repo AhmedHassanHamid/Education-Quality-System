@@ -1,0 +1,74 @@
+
+<img src="https://i.pinimg.com/564x/5f/40/6a/5f406ab25e8942cbe0da6485afd26b71.jpg" class="rounded float-start" alt="profile">
+
+
+<div class="card"style="color:#fff">
+  <div class="card-header" style="color:#fff">
+   <h2>Edit <%= resource_name.to_s.humanize %></h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+  </div>
+  <div class="card-body" style="color:#fff">
+    <blockquote class="blockquote mb-0">
+      <div class="field form-group">
+    <br />
+    <%= f.email_field :email, class:"form-control" , placeholder:"Email" ,autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+  <% end %>
+<br>
+
+  <div class="field form-group">
+    
+    <%= f.password_field :password,class:"form-control" , placeholder:"Password (leave blank if you don't want to change it)", autocomplete: "new-password" %>
+    <% if @minimum_password_length %>
+      <br />
+      <em><%= @minimum_password_length %> characters minimum</em>
+    <% end %>
+  </div>
+
+  <div class="field form-group">
+    
+    <%= f.password_field :password_confirmation,class:"form-control" , placeholder:"Password Confirmation", autocomplete: "new-password" %>
+  </div>
+<br>
+  <div class="field form-group">
+    
+    <%= f.password_field :current_password,class:"form-control" , placeholder:"Current Password (we need your current password to confirm your changes)", autocomplete: "current-password" %>
+  </div>
+      <footer class="blockquote-footer"><div class="actions">
+    <%= f.submit "Update" ,class:'btn btn-secondary' %>
+  </div>
+<% end %></footer>
+    </blockquote>
+  </div>
+</div>
+
+<br>
+<br>
+<div class="card">
+  <div class="card-header">
+   <h3>Cancel my account</h3> 
+  </div>
+
+
+
+  <div class="card-body" style="color:#fff">
+    <blockquote class="blockquote mb-0">
+     <p>Unhappy?<p> 
+      <footer class="blockquote-footer"><%= button_to "Cancel my account", registration_path(resource_name), class:'btn btn-danger',data: { confirm: "Are you sure?" }, method: :delete %></p></footer>
+    </blockquote>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+

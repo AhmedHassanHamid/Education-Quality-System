@@ -1,0 +1,34 @@
+<p  style="color:#fff" id="notice"><%= notice %></p>
+
+
+<br>
+<p  style="color:#fff">
+  <strong>First name:</strong>
+  <%= @trapple.first_name %>
+</p>
+
+<p  style="color:#fff">
+  <strong>Last name:</strong>
+  <%= @trapple.last_name %>
+</p>
+
+<p  style="color:#fff">
+  <strong>Email:</strong>
+  <%= @trapple.email %>
+</p>
+
+<p   style="color:#fff">
+  <strong>Phone:</strong>
+  <%= @trapple.phone %>
+</p>
+
+<p   style="color:#fff">
+  <strong>Trapple:</strong>
+  <%= @trapple.trapple %>
+</p>
+<br>
+<%= link_to 'Edit', edit_trapple_path(@trapple) , class:"btn btn-dark"%> |
+<%= link_to 'Back', new_trapple_path , class:"btn btn-light"%>
+
+<br> <br> <br>
+<%= link_to 'Home', root_path , class:"btn btn-light "%>

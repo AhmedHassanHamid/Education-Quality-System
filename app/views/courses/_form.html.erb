@@ -1,0 +1,185 @@
+<%= form_with(model: course) do |form| %>
+  <% if course.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(course.errors.count, "error") %> prohibited this course from being saved:</h2>
+
+      <ul>
+        <% course.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group">
+    <%= form.text_field :Course_nameL,
+    class:"form-control", placeholder:"Course name" %>
+  </div>
+  </br>
+  <div class="field form-group">
+    <%= form.text_field :Hours,
+    class:"form-control",placeholder:"Hours" %>
+  </div>
+  </br>
+  <div class="field form-group">
+    <%= form.text_field :Semester,
+    class:"form-control",placeholder:"Semester" %>
+  </div>
+  </br>
+   
+  
+  <div class="field form-group">
+    <%= form.number_field :user_id,
+    id: :courses_user_id,
+    class:"form-control",value:current_user.id , type: :hidden %>
+  </div>
+
+  
+  <div class="control-group">
+   <%= form.label "◉ Knowledge and Understanding Skills", class: 'control-label'  %>
+    <div class="controls">
+      <%= form.select(:skills_ku1, options_for_select([['Use high-level programming languages'],['Outline fundamental topics in computer systems, including hardware architectures and operating systems'],['Demonstrate strong knowledge of fundamentals of programming and the construction of computer-based systems'],
+      ['Describe the basic parts of a computer system and their relationships'],['Explain basic computer terminology'],['Discuss the history of computers, networking, and software']]), {include_blank: true} ,{ class: "form-control" }) %>
+
+  
+
+    </div>
+  </br>
+  <div class="controls">
+      <%= form.select(:skills_ku2, options_for_select([['State the rules of using the Internet and its access'],['Outline fundamental topics in computing, including software architectures, software engineering principles and methodologies, and software tools'],['Identify basic fundamentals of data structures and algorithms'],['Be familiar with the main electrical circuit elements'],['Describe the main circuit theories'],['Be familiar with the different electronic devices']]), {include_blank: true} ,{ class: "form-control" }) %>
+    </div>
+    </br>
+  <div class="controls">
+      <%= form.select(:skills_ku3, options_for_select([['Define the basic applications of each electronic device'],['Describe the operation of the basic electronic circuits'],['Differentiate and integrate different types of functions'],['Identify the core fundamentals of analysis, algebra and applied mathematics'],['Define the motion of different objects regardless of their mass and dimensions, differentiation between linear, two dimension, circular, rotation, rolling and oscillatory motions'],['Understand the concept of force and mass, more about the three laws of motion']]), {include_blank: true}, { class: "form-control" }) %>
+    </div>
+    </br>
+  <div class="controls">
+      <%= form.select(:skills_ku4, options_for_select([['Define sound waves as a type of mechanical waves'],['Define scientific problems properly'],['Demonstrate basic knowledge and understanding of a core of analysis and applied mathematics'],['Demonstrate basic knowledge and explaining fundamental principles and grammars of using English in computing, how it support IT-based applications'],['Define the purpose and nature of the field of organizational behavior'],['Discuss various types of behavior modification theories and techniques']]), {include_blank: true},{ class: "form-control" }) %>
+    </div>
+    </br>
+  <div class="controls">
+      <%= form.select(:skills_ku5, options_for_select([['Define the concept of an algorithm and a few specific examples of algorithms'],['Identify the essential of the concepts of Programming Techniques.'],['Describe fundamental topics in computing including software architectures, software engineering principles and methodologies and software tools'],['Outline basic knowledge and understanding of a core of analysis'],['Explain the nature and function of a high level language’s constructs and syntax(C++)'],['Describe the concept of control constructs ']]), {include_blank: true},{ class: "form-control" }) %>
+    </div>
+    </br>
+  <div class="controls">
+      <%= form.select(:skills_ku6, options_for_select([['Explain Looping techniques'],['Describe key concepts of simple and dynamic data structures'],['Identify the tools, practices and methodologies used in the specification, design, implementation and evaluation of computer programs'],['Describe the concept of different number systems'],['Define the different types of logic gates and logic functions'],['Explain the concept of Boolean functions and Boolean algebra']]), {include_blank: true},{ class: "form-control" }) %>
+    </div>
+    </br>
+  <div class="controls">
+      <%= form.select(:skills_ku7, options_for_select([['Explain the concept of sequential logic circuits'],['Define different types of flip-flops and latches'],['Identify different types of computer memories and their arrangements'],['Discuss different types of prefabricated integrated circuits and logic families'],['Describe basic knowledge and understanding of fundamental principles of computer architectures how these support IT-based applications'],['Define different techniques of integration']]), {include_blank: true},{ class: "form-control" }) %>
+    </div>
+    </br>
+  <div class="controls">
+      <%= form.select(:skills_ku8, options_for_select([['Model a simple system to obtain first order differential equations. Visualize solutions of first order ODE'],['Define first order linear homogeneous and non-homogeneous differential equations'],['Describe applications of first order differential equations in different fields'],['Explain basic knowledge and understanding of a core of analysis, algebra and applied mathematics'],['Knowledge about different sources of magnetic fields'],['Explain the contribution of Maxwell’s equations in the field of electromagnetism and their role in explanation of all forms of electromagnetic phenomena']]), {include_blank: true},{ class: "form-control" }) %>
+    </div>
+    </br>
+  <div class="controls">
+      <%= form.select(:skills_ku9, options_for_select([['Define the concepts of Interference, diffraction and polarization of visible light'],
+['Describe the superconductivity as one of the promising phenomenon in physics and technology'],
+['Describe the relativity as a generalization of existing fundamental concepts of physics'],
+['Define basic knowledge and understanding of a core of analysis and applied mathematics'],
+['Interpreting and analyzing data qualitatively and/or quantitatively'],
+['Explain the nature and role of accounting'], 
+['Explain the nature of three major financial statements'], 
+['Discuss the accounting conventions underpinning the balance sheet'],
+['Explain cash flows from operating, investing, and financing activities; direct and indirect method'],
+['Describe tools of analysis'],
+['Identify a critical understanding of the broad context within which computing including issues such as enterprise and accounting'],
+['Show a critical understanding of the broad context within computing including issues such as quality, reliability, enterprise, employment law and accounting'], 
+['Provide a deeper understanding of legal, professional and moral aspects of the exploitation of IT'], 
+['Demonstrate strong knowledge of business information systems'], 
+['Provide a deeper understanding of some aspects of decision support systems'], 
+['Demonstrate a working knowledge within key domains of management, business, economics, operations management, corporate finance, marketing, and strategic planning']
+]), {include_blank: true},{ class: "form-control" }) %>
+    </div>
+  </div>
+  <div class="control-group">
+   <%= form.label "◉ Intellectual Skills", class: 'control-label'  %>
+    <div class="controls">
+      <%= form.select(:skills_i1, options_for_select([['Define traditional and nontraditional problems, set goals towards solving them, and observe results'],['Restrict solution methodologies upon their results.'],['Perform problem analysis from written descriptions; derive requirements specifications from an understanding of problems (analysis, synthesis).'],['Perform comparisons between (methods, techniques...etc)'],['Summarize the proposed solutions ad their results'],['Establish criteria, and verify solutions.']]), {include_blank: true},{ class: "form-control" }) %>
+    </div>
+  </br>
+  <div class="controls">
+      <%= form.select(:skills_i2, options_for_select([['Identify attributes, components, relationships, patterns, main ideas, and errors'],['Identify a range of solutions and critically evaluate and justify proposed design solutions. '],['Identify and analyze simple electrical circuits.'],['Analyze different types of functions using algebra and calculus'],['Identify a range of solutions and critically evaluate and justify proposed design solutions. '],['Identify the relation between Work and Energy (Potential and Kinetic)']]), {include_blank: true},{ class: "form-control" }) %>
+    </div>
+    </br>
+  <div class="controls">
+      <%= form.select(:skills_i3, options_for_select([['Identify a range of solutions and critically evaluate and justify proposed design solutions'],['Perform analysis from written descriptions.'],['Identify attributes, components, main ideas and typos.'],['Differentiate between the dominant perspectives in the field of organizational behavior'],['Identify specific steps managers can take to motivate employees'],['Identify attributes, components, relationships, patterns and main ideas']]), {include_blank: true},{ class: "form-control" }) %>
+    </div>
+    </br>
+  <div class="controls">
+      <%= form.select(:skills_i4, options_for_select([['Break a large problem into smaller parts, writing each part as a module or function'],['Generate an innovative design to solve a problem containing a range of commercial and industrial constraints. '],['Analyze the requirements of a range of computer-based systems and examine the design alternatives based on the constraints imposed by society, organizations, and technology.'],['Work with and model computer systems at different and appropriate levels of abstraction.'],['Enhance ability to approach problems systematically'],['Simplify logic circuits using Boolean algebra and Karnaugh maps']]), {include_blank: true},{ class: "form-control" }) %>
+    </div>
+    </br>
+  <div class="controls">
+      <%= form.select(:skills_i5, options_for_select([['Design simple logic circuits'],['Analyze and design simple sequential circuits'],['Summarize the proposed solutions and their results.'],['Identify a range of solutions and critically evaluate and justify proposed design solutions.'],['emonstrate intuitive and computational understanding of integration, infinite series, and first order differential equations.'],['Identify optical waves as just a type of electromagnetic waves.']]), {include_blank: true},{ class: "form-control" }) %>
+    </div>
+    </br>
+  <div class="controls">
+      <%= form.select(:skills_i6, options_for_select([['Identify the main users of financial information'],['Distinguish between financial & management accounting'],['Raise the questions or objectives of analysis.'],['Solve information technology problems with pressing commercial or industrial constraints.'],['Generate an innovative design to solve a problem containing a range of commercial and industrial constraints'],['Generate an innovative design to solve a problem containing a range of commercial and industrial constraints.']]), {include_blank: true},{ class: "form-control" }) %>
+    </div>
+    </br>
+  <div class="controls">
+      <%= form.select(:skills_i7, options_for_select([['Recognize the professional, moral and ethical issues of involved in the exploitation of computing and be guided by their adoption, reflect on issues of professional practice within the discipline.'],['Recognize risks aspects involved in the operation of computing systems and projects']]), {include_blank: true},{ class: "form-control" }) %>
+    </div>
+  </div>
+
+  <div class="control-group">
+   <%= form.label "◉ Professional and Practical Skills", class: 'control-label'  %>
+    <div class="controls">
+      <%= form.select(:skills_pp1, options_for_select([['Use appropriate programming languages and design methodologies'],['Master the basic functions of the Windows operating system.'],['Master the basics of computer maintenance.'],['Make effective use of general computing facilities.'],['Evaluate systems in terms of their quality and possible trade-offs, evaluate appropriate hardware solutions for given scenarios.'],['  Identify any risks or safety aspects that may be involved in the operation of computing equipment within a given context. '],['Operate computing equipment efficiently, taking into account its logical and physical properties.'],['Deal with electrical and electronic circuits. '],['Design simple electronic circuits.']]), {include_blank: true},{ class: "form-control" }) %>
+    </div>
+  </br>
+  <div class="controls">
+      <%= form.select(:skills_pp2, options_for_select([['Use calculus to compute, graph, model, and solve problems.'],['Solve applications from different fields involving various meanings of the derivative and integral.'],['Apply tools and techniques for the design and development of applications'],['Apply different Physics concepts not only in his field of study but also in life.'],['Apply laws of motion to different types of moving objects in space. '],['Define scientific problems properly and trying their solution.'],['Solve scientific problems. '],['Identify any risks or safety aspects that may be involved in the operation of computing equipment within a given context.'],['Operate computing equipment efficiently, taking into account its logical and physical properties.']]), {include_blank: true},{ class: "form-control" }) %>
+    </div>
+    </br>
+  <div class="controls">
+      <%= form.select(:skills_pp3, options_for_select([['Perform independent information acquisition using the scientific literature and Web sources'],['Effectively deploy tools for the documentation.'],['Appreciate the need for continuing professional development in recognition of the need for lifelong learning.'],['Apply different concepts related to organizational behavior and human perception'],['Analyze different concepts related to leadership and decision making. '],['Apply different concepts related to managing conflict, stress, and communication.'],['Appreciate the need for continuing professional development in recognition of the need for lifelong learning.'],['Use appropriate programming languages and tools, and design methodologies.'],['Interpret verbal problem specifications into program code']]), {include_blank: true},{ class: "form-control" }) %>
+    </div>
+    </br>
+  <div class="controls">
+      <%= form.select(:skills_pp4, options_for_select([['Design, write and debug computer programs in C++ language.'],['Use MSI circuits to design logic circuits '],['Use programmable devices (ROM, PAL, PLA, ....) to design simple logic circuits'],['Evaluate systems in terms of their quality and possible trade-offs, evaluate appropriate hardware solutions for given scenarios.'],['Identify any risks or safety aspects that may be involved in the operation of computing equipment within a given context. '],['Recognizing the logical and physical properties of computing equipment.'],['Test the convergence of infinite series.'],['Use integration and partial fractions in many applications in applied sciences.'],['Solve the first order differential equations.']]), {include_blank: true},{ class: "form-control" }) %>
+    </div>
+    </br>
+  <div class="controls">
+      <%= form.select(:skills_pp5, options_for_select([['Apply tools and techniques for the design and development of applications'],['Apply the laws of electricity and magnetism and their applications to the operation of different electronic devices. '],['Deal correctly with different electronic equipment used in different scientific and technological laboratories.'],['Collect and properly analyze experimental data.'],['Operate computing equipment efficiently, taking into account its logical and physical properties.'],['Prepare a simple balance sheet, interpreting the information that it contains.'],['Analyze the items that belong to current assets account, including cash, accounts receivable and inventory. '],['Analyze the information included in cash flow statements.'],['Make effective use of general IT facilities, plan and manage a project to complete within budget and schedule. '],['Make effective use of general IT facilities, plan and manage a project to complete within budget and schedule.'],['Appreciate the need for continuing professional development in recognition of the need for lifelong learning.']]), {include_blank: true},{ class: "form-control" }) %>
+    </div>
+  </div>
+
+  <div class="control-group">
+   <%= form.label "◉General and Transferable Skills", class: 'control-label'  %>
+    <div class="controls">
+      <%= form.select(:skills_gt1, options_for_select([['1. Communicate effectively by oral, written and visual means.'],['Use IT skills and display mature computer literacy. '],['Demonstrate efficient IT capabilities. '],['Work effectively as an individual and as a member of a team. '],['Lead and motivate individuals.'],['Work in stressful environment and within constraints.']]), {include_blank: true},{ class: "form-control" }) %>
+    </div>
+  </br>
+  <div class="controls">
+      <%= form.select(:skills_gt2, options_for_select([['Manage ones own learning and personal and professional development.
+Develop Creativity and imagination skills, Self-assessment ability and Critical thinking and analytic ability.'],['Preserve a clean environment in all aspects.'],['Take the concept of the academic honesty as a principal in their career.'],['Collaborate effectively within multidisciplinary team.'],['Prepare technical reports, and a dissertation, to a professional standard. '],['Search for information and adopt life-long self-learning.']]), {include_blank: true},{ class: "form-control" }) %>
+    </div>
+    </br>
+  <div class="controls">
+      <%= form.select(:skills_gt3, options_for_select([['Prepare their work in the form of reports, oral presentations or an internet web site.'],['Develop strong problem-solving and decision-making skills, and will be able to apply those skills effectively in all aspects of their future lives.'],['Work in stressful environment and within constraints.'],['Acquire entrepreneurial skills.'],['Manage ones own learning and development, including time management and organizational skills.'],['Develop interpersonal skills planning and managing personal time and work. ']]), {include_blank: true},{ class: "form-control" }) %>
+    </div>
+    </br>
+  <div class="controls">
+      <%= form.select(:skills_gt4, options_for_select([['Work effectively as an individual and as a member of a team.'],['20. Manage ones own learning and development, including time management and organizational skills.'],['Manage ones own learning and personal and professional development'],['Develop an understanding to preserve a clean environment in all aspects.'],['Develop a feeling of the importance of learning all times.'],['Acquire entrepreneurial skills.']]), {include_blank: true},{ class: "form-control" }) %>
+    </div>
+    </br>
+  <div class="controls">
+      <%= form.select(:skills_gt5, options_for_select([['Exhibit appropriate numeracy skills in understanding and presenting cases involving a quantitative dimension'],['Develop strong problem-solving and decision-making skills, and will be able to apply those skills effectively in all aspects of their future lives.'],['Acquire entrepreneurial skills.'],['Develop strong problem-solving and decision-making skills, and will be able to apply those skills effectively in all aspects of their future lives.'],['Build problem-solving and decision-making skills and will be able to apply those skills effectively in all aspects of their future lives']]), {include_blank: true},{ class: "form-control" }) %>
+    </div>
+  </div>
+  
+</br>
+  <div class="actions">
+    <%= form.submit class:'btn btn-secondary' %>
+  </div>
+<% end %>
+</br>
+
+<div class="table-wrapper-scroll-y my-custom-scrollbar">
+
+  
+
+</div>

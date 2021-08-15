@@ -1,0 +1,44 @@
+<div class="p-5 mb-4 rounded-3" style="background-color:#434343;color:#fff;">
+      <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold"><%= @course.Course_nameL %></h1>
+        <p class="col-md-8 fs-4"> Hours: <%= @course.Hours %></p>
+        <p class="col-md-8 fs-4"> Semester: <%= @course.Semester %></p>
+        <h3>Knowledge and Understanding Skills:</h3>
+        <p class="col-md-8 fs-4">  <%= @course.skills_ku1 %></p>
+        <p class="col-md-8 fs-4">  <%= @course.skills_ku2 %></p>
+        <p class="col-md-8 fs-4">  <%= @course.skills_ku3 %></p>
+        <p class="col-md-8 fs-4">  <%= @course.skills_ku4 %></p>
+        <p class="col-md-8 fs-4">  <%= @course.skills_ku5 %></p>
+        <p class="col-md-8 fs-4">  <%= @course.skills_ku6 %></p>
+        <p class="col-md-8 fs-4">  <%= @course.skills_ku7 %></p>
+        <p class="col-md-8 fs-4">  <%= @course.skills_ku8 %></p>
+        <p class="col-md-8 fs-4">  <%= @course.skills_ku9 %></p>
+      </br>
+        <h3>Intellectual Skills:</h3>
+        <p class="col-md-8 fs-4">  <%= @course.skills_i1 %></p>
+        <p class="col-md-8 fs-4">  <%= @course.skills_i2 %></p>
+        <p class="col-md-8 fs-4">  <%= @course.skills_i3 %></p>
+        <p class="col-md-8 fs-4">  <%= @course.skills_i4 %></p>
+        <p class="col-md-8 fs-4">  <%= @course.skills_i5 %></p>
+        <p class="col-md-8 fs-4">  <%= @course.skills_i6 %></p>
+        <p class="col-md-8 fs-4">  <%= @course.skills_i7 %></p>
+      </br>
+      <h3>Professional and Practical Skills:</h3>
+        <p class="col-md-8 fs-4">  <%= @course.skills_pp1 %></p>
+        <p class="col-md-8 fs-4">  <%= @course.skills_pp2 %></p>
+        <p class="col-md-8 fs-4">  <%= @course.skills_pp3 %></p>
+        <p class="col-md-8 fs-4">  <%= @course.skills_pp4 %></p>
+        <p class="col-md-8 fs-4">  <%= @course.skills_pp5 %></p>
+      </br><h3>General and Transferable Skills:</h3>
+        <p class="col-md-8 fs-4">  <%= @course.skills_gt1 %></p>
+        <p class="col-md-8 fs-4">  <%= @course.skills_gt2 %></p>
+        <p class="col-md-8 fs-4">  <%= @course.skills_gt3 %></p>
+        <p class="col-md-8 fs-4">  <%= @course.skills_gt4 %></p>
+        <p class="col-md-8 fs-4">  <%= @course.skills_gt5 %></p>
+
+        <%= link_to 'Edit', edit_course_path(@course),class:'btn btn-secondary' %> |
+        <%= link_to 'Back', courses_path,class:'btn btn-secondary' %>
+      </div>
+    </div>
+
+

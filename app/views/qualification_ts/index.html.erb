@@ -1,0 +1,37 @@
+<p id="notice" class="btn btn-outline-danger"><%= notice %></p>
+
+<h1>Qualification Requests</h1>
+<br> <br>
+<table class="table table-striped table-bordered" >
+
+  <thead class="table-dark">
+    <tr style="color:#fff">
+      <th>phone number</th>
+      <th>Knowledge and Understanding </th>
+      <th>Intellectual </th>
+      <th>Professional and Practical</th>
+      <th>General and Transferable</th>
+<th>user id</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @qualification_ts.each do |qualification_t| %>
+      <tr style="color:#fff">
+        <td><%= qualification_t.first_name %></td>
+        <td><%= qualification_t.last_name %></td>
+        <td><%= qualification_t.email %></td>
+        <td><%= qualification_t.phone %></td>
+        <td><%= qualification_t.skills %></td>
+        <td><%= qualification_t.user_id %></td>
+        <td><%= link_to 'Destroy', qualification_t, method: :delete, data: { confirm: 'Are you sure?' } , class:"btn btn-danger" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Home ', root_path , class:"btn btn-secondary" %>
+<br><br>

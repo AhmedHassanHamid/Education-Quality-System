@@ -1,0 +1,55 @@
+
+
+<table class="table table-striped table-bordered table-hover">
+  <thead class="table-dark">
+    <tr>
+      <th><%= @friend.first_name %></th>
+      <th><%= @friend.last_name %></th>
+      <th><%= @friend.email %></th>
+      <th><%= @friend.phone %></th>
+      <th><%= @friend.twitter %></th>
+     
+    </tr>
+  </thead>
+
+ 
+</table>
+
+
+
+
+
+
+<!-- <p>
+  <strong>First name:</strong>
+  <%= @friend.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @friend.last_name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @friend.email %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @friend.phone %>
+</p>
+
+<p>
+  <strong>Twitter:</strong>
+  <%= @friend.twitter %>
+</p> -->
+
+<%= link_to 'Home', root_path(@friend),class:"btn btn-secondary"%> |
+<%= link_to 'Back', new_friend_path ,class:"btn btn-light"%>
+
+
+
+
+
+

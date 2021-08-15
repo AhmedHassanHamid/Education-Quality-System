@@ -1,0 +1,58 @@
+<%= form_with(model: trapple) do |form| %>
+  <% if trapple.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(trapple.errors.count, "error") %> prohibited this trapple from being saved:</h2>
+
+      <ul>
+        <% trapple.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+
+
+
+
+<br>
+  <div class="field form-group">
+    
+    <%= form.text_field :first_name , class:"form-control",placeholder:"First Name"%>
+  </div>
+<br>
+  <div class="field form-group">
+    
+    <%= form.text_field :last_name , class:"form-control",placeholder:"Last Name"%>
+  </div>
+<br>
+  <div class="field form-group">
+   
+    <%= form.text_field :email, class:"form-control",placeholder:"Email" %>
+  </div>
+<br>
+  <div class="field form-group">
+   
+    <%= form.text_field :phone, class:"form-control",placeholder:"Phone" %>
+  </div>
+<br>
+  <div class="field form-group">
+   
+    <%= form.text_field :Trapple, class:"form-control",placeholder:"Trouble" %>
+  </div>
+  <br>
+
+  
+
+
+  <div class="actions">
+    <%= form.submit  %>
+  </div>
+<% end %>
+
+
+
+
+
+

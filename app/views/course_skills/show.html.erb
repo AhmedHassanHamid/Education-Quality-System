@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Course code:</strong>
+  <%= @course_skill.course_code %>
+</p>
+
+<p>
+  <strong>Skills:</strong>
+  <%= @course_skill.skills %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @course_skill.User_id %>
+</p>
+
+<%= link_to 'Edit', edit_course_skill_path(@course_skill) %> |
+<%= link_to 'Back', course_skills_path %>

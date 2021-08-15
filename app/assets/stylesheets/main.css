@@ -1,0 +1,68 @@
+body {
+  background: #262626;
+  padding: 0px;
+  margin: 0px;
+}
+
+.container{
+	width: 1349px;
+}
+
+/* carousel */
+.carousel{
+	width: 100%;
+	height: auto;
+}
+
+/* sign */
+.card-header{
+	background-color: #313131;
+	color: #fff;
+}
+
+.card{
+	background-color: #313131;
+}
+
+.sign-Error{
+	font-size: 17px;
+}
+
+/* navbar */
+.navbar{
+	padding-left: 15px;
+	margin-bottom: 0px;
+}
+.navbar-brand{
+
+}
+.nav-bg{
+  background: #424242;
+}
+
+/* course skills */
+.form-control {
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background: #424242;
+  background-image: none;
+  width:  80%;
+  font-size: 16px;
+  color: #fff;
+  display: block;
+}
+
+.control-label{
+  font-size: 24px;
+  font-family: sans-serif;
+  color: #fff;
+}
+
+.container h1{
+  font-size: 34px;
+  font-family: sans-serif;
+  color: #fff;
+  font-weight: bold;	
+}

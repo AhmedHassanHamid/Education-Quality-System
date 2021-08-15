@@ -1,0 +1,39 @@
+<p id="notice" class="btn btn-outline-danger"><%= notice %></p>
+
+
+
+
+
+
+
+<h1>Troubles</h1>
+<br>
+<table class="table table-striped table-bordered table-hover">
+  <thead class="table-dark">
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Trapple</th>s
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @trapples.each do |trapple| %>
+      <tr style="color:#fff">
+        <td><%= trapple.first_name %></td>
+        <td><%= trapple.last_name %></td>
+        <td><%= trapple.email %></td>
+        <td><%= trapple.phone %></td>
+        <td><%= trapple.trapple %></td>
+        <td><%= link_to 'Destroy', trapple, method: :delete, data: { confirm: 'Are you sure?' } ,class:"btn btn-danger"%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Home', root_path ,class:"btn btn-secondary" %>

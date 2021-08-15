@@ -1,0 +1,2 @@
+class CoureSkill < ApplicationRecord
+end
